@@ -28,6 +28,12 @@
   <div
     id="addDatasets"
   >
+    <calcite-button 
+    onclick="addFeatures()"
+    >
+    Add Features
+  </calcite-button>
+
   <calcite-button 
       onclick="addDatasets('7c6443b23d364689be9b34324e6c677d')"
     >
@@ -121,6 +127,57 @@
       componentEl.datasetIds = componentEl.datasetIds.concat([datasetId]);
     }
     placeholderEl.appendChild(componentEl);
+
+    componentEl.addEventListener("mapViewExtentChanged", (event) => {
+      console.log("mapViewExtentChanged", event.detail);
+    });
+    function addFeatures() {
+      const features = [];
+      for(let i = 0; i < 10; i++) {
+        let geometry = {
+          type: "point",  
+          x: -77.0 + i,
+          y: 38.9 + i,
+          spatialReference: {
+              "wkid": 4326
+          }
+        };
+
+        let symbol = {
+          type: "simple",  
+          color: [226, 119, 40]
+        };
+
+        let attributes = {
+          OBJECTID: i,
+          url: "TransCanada"
+        };
+
+        let graphic = {
+          geometry,
+          symbol,
+          attributes
+        };
+
+        features.push(graphic);
+      }
+      
+      const featureLayer = {
+        title: "Discussions",
+        source: features,
+        fields: [{
+          name: "OBJECTID",
+          type: "oid"
+        }, {
+          name: "url",
+          type: "string"
+        }],
+        objectIdField: "OBJECTID",
+        geometryType: "point"
+        // renderer: newFeatures.renderer
+      }
+      componentEl.features = featureLayer;
+    }
   </script>
 
 </body>

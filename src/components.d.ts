@@ -20,6 +20,10 @@ export namespace Components {
           * Optional array of datasets to add to map
          */
         "datasetIds": string[];
+        /**
+          * Optional features to display on the map See https://developers.arcgis.com/javascript/latest/sample-code/layers-featurelayer-collection/
+         */
+        "features": any[];
         "filterTables": (geometry: any) => Promise<void>;
         /**
           * Optional Map id to display
@@ -102,10 +106,23 @@ declare namespace LocalJSX {
          */
         "datasetIds"?: string[];
         /**
+          * Optional features to display on the map See https://developers.arcgis.com/javascript/latest/sample-code/layers-featurelayer-collection/
+         */
+        "features"?: any[];
+        /**
           * Optional Map id to display
          */
         "mapId"?: string;
         "onMapSaved"?: (event: HubCompassMapCustomEvent<any>) => void;
+        /**
+          * Event emitted when the map view's extent changes due to panning or zooming.
+          * @event mapViewExtentChanged
+          * @type {CustomEvent<{ extent: __esri.Extent, center: __esri.Point, zoom: number }>}
+          * @property {__esri.Extent} extent - The new extent of the map view.
+          * @property {__esri.Point} center - The new center point of the map view.
+          * @property {number} zoom - The new zoom level of the map view.
+         */
+        "onMapViewExtentChanged"?: (event: HubCompassMapCustomEvent<any>) => void;
         /**
           * Service area distances in kilomenters Default to 1,5,10 minute based on 4.54km/hr speed
          */

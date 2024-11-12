@@ -1,4 +1,4 @@
-# hub-radar-maps
+# hub-compass-maps
 
 Web components for Hub Radar chatbot, built with ArcGIS Maps SDK for Javascript
 

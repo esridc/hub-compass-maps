@@ -15,6 +15,9 @@ import Legend from "@arcgis/core/widgets/Legend";
 import FeatureTable from "@arcgis/core/widgets/FeatureTable";
 import Expand from "@arcgis/core/widgets/Expand";
 import BasemapGallery from "@arcgis/core/widgets/BasemapGallery";
+import * as projection from "@arcgis/core/geometry/projection.js";
+import SpatialReference from "@arcgis/core/geometry/SpatialReference.js";
+
 // import PortalItem from "@arcgis/core/portal/PortalItem";
 // import reactiveUtils from "@arcgis/core/reactiveUtils";
 
@@ -32,6 +35,30 @@ export class HubCompassMap {
    */
   @Prop() mapId: string = null;
 
+  /**
+   * Optional features to display on the map
+   * See https://developers.arcgis.com/javascript/latest/sample-code/layers-featurelayer-collection/
+   */
+  @Prop() features: any[] = null;
+
+  @Watch('features')
+  public async addFeatures(newFeatures) {
+    if (newFeatures) {
+
+      // Now build feature layer and add to map
+      const featureLayer = await new FeatureLayer({
+        title: newFeatures.title,
+        source: newFeatures.source,
+        fields: newFeatures.fields,
+        objectIdField: newFeatures.objectIdField,
+        geometryType: newFeatures.geometryType,
+        // spatialReference: newFeatures.spatialReference,
+        // renderer: newFeatures.renderer || null
+      });
+
+      this.webMap.add(featureLayer);
+    }
+  }
   /**
    * Optional [longitude, latitude] map center
    */
@@ -156,6 +183,18 @@ export class HubCompassMap {
     });
   }
 
+  /**
+   * Event emitted when the map view's extent changes due to panning or zooming.
+   * 
+   * @event mapViewExtentChanged
+   * @type {CustomEvent<{ extent: __esri.Extent, center: __esri.Point, zoom: number }>}
+   * @property {__esri.Extent} extent - The new extent of the map view.
+   * @property {__esri.Point} center - The new center point of the map view.
+   * @property {number} zoom - The new zoom level of the map view.
+   */
+  @Event() mapViewExtentChanged: EventEmitter;
+  
+  
   @Event() mapSaved: EventEmitter;
   @Method()
   public async saveMap(title:string = "New webmap", snippet:string = "Created by Hub AI assistant") {
@@ -321,6 +360,15 @@ export class HubCompassMap {
       if(this.showServiceAreas) {
         this.createServiceAreas(event.mapPoint);
       }
+    });
+    this.mapView.watch("extent", () => {
+      let outSpatialReference = new SpatialReference({
+        wkid: 4326 
+      });
+      const extent = projection.project(this.mapView.extent, outSpatialReference);
+      const center = projection.project(this.mapView.center, outSpatialReference);
+      const zoom = this.mapView.zoom;
+      this.mapViewExtentChanged.emit({ extent, center, zoom });
     });
 
     // reactiveUtils.when(
