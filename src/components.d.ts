@@ -9,6 +9,10 @@ export namespace Components {
     interface HubCompassMap {
         "addDatasetToMap": (datasetId: any) => Promise<void>;
         /**
+          * Basemap string Options: https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#basemap
+         */
+        "basemap": string;
+        /**
           * Optional [longitude, latitude] map center
          */
         "center": [number, number];
@@ -89,6 +93,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface HubCompassMap {
+        /**
+          * Basemap string Options: https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#basemap
+         */
+        "basemap"?: string;
         /**
           * Optional [longitude, latitude] map center
          */

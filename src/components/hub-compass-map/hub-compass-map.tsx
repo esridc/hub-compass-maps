@@ -129,6 +129,12 @@ export class HubCompassMap {
   @Prop() session = null;
 
   /**
+   * Basemap string
+   * Options: https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#basemap
+   */
+  @Prop() basemap: string = "arcgis-topographic";
+
+  /**
    * If map has already been saved, update it.
    */
   @State() _item = null;
@@ -267,7 +273,7 @@ export class HubCompassMap {
     // esriConfig.apiKey = "AAPK42ebee6b2e134974bffd492cdf7f365dXxAPfRSdf05kJ3AtuEevSfJqUEZ34Vhy2UfrxPtSXrQAfwL04Zij-GfOEQU9OD_9";
 
     this.webMap = new WebMap({
-      basemap: "arcgis-topographic" // Basemap layer service
+      basemap: this.basemap // Basemap layer service
     });
     this.mapView = new MapView({
       map: this.webMap,
