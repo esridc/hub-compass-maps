@@ -1,8 +1,0 @@
-import{d as p}from"./p-8b44477c.js";import"./p-3013819f.js";import"./p-3b51db5e.js";import"./p-9b68b44d.js";import"./p-49ae4733.js";import"./p-fe91e791.js";import"./p-2c44d431.js";import"./p-43877d33.js";import"./p-f148cf8f.js";import"./p-b007e81c.js";import"./p-483e769b.js";import"./p-77f2a655.js";import"./p-19172bea.js";import"./p-39f987a6.js";import"./p-14eaf8be.js";import"./p-e37240b5.js";import"./p-9131549e.js";import"./p-7dec6513.js";import"./p-6cc6542d.js";import"./p-e2b49f40.js";import"./p-df5915d3.js";import"./p-661d8950.js";import"./p-8ba7cdd1.js";import"./p-4311ebaf.js";import"./p-01810b75.js";
-/*!
- * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
- * See https://github.com/Esri/calcite-design-system/blob/main/LICENSE.md for details.
- * v2.7.0
- */
-var _={name:"el",weekdays:"Κυριακή_Δευτέρα_Τρίτη_Τετάρτη_Πέμπτη_Παρασκευή_Σάββατο".split("_"),weekdaysShort:"Κυρ_Δευ_Τρι_Τετ_Πεμ_Παρ_Σαβ".split("_"),weekdaysMin:"Κυ_Δε_Τρ_Τε_Πε_Πα_Σα".split("_"),months:"Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάιος_Ιούνιος_Ιούλιος_Αύγουστος_Σεπτέμβριος_Οκτώβριος_Νοέμβριος_Δεκέμβριος".split("_"),monthsShort:"Ιαν_Φεβ_Μαρ_Απρ_Μαι_Ιουν_Ιουλ_Αυγ_Σεπτ_Οκτ_Νοε_Δεκ".split("_"),ordinal:function p(_){return _},weekStart:1,relativeTime:{future:"σε %s",past:"πριν %s",s:"μερικά δευτερόλεπτα",m:"ένα λεπτό",mm:"%d λεπτά",h:"μία ώρα",hh:"%d ώρες",d:"μία μέρα",dd:"%d μέρες",M:"ένα μήνα",MM:"%d μήνες",y:"ένα χρόνο",yy:"%d χρόνια"},formats:{LT:"h:mm A",LTS:"h:mm:ss A",L:"DD/MM/YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY h:mm A",LLLL:"dddd, D MMMM YYYY h:mm A"}};p.locale(_,null,true);export default _;
-//# sourceMappingURL=p-dc5fe632.js.map

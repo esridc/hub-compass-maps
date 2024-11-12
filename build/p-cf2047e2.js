@@ -1,8 +1,0 @@
-import{d as e}from"./p-8b44477c.js";import"./p-3013819f.js";import"./p-3b51db5e.js";import"./p-9b68b44d.js";import"./p-49ae4733.js";import"./p-fe91e791.js";import"./p-2c44d431.js";import"./p-43877d33.js";import"./p-f148cf8f.js";import"./p-b007e81c.js";import"./p-483e769b.js";import"./p-77f2a655.js";import"./p-19172bea.js";import"./p-39f987a6.js";import"./p-14eaf8be.js";import"./p-e37240b5.js";import"./p-9131549e.js";import"./p-7dec6513.js";import"./p-6cc6542d.js";import"./p-e2b49f40.js";import"./p-df5915d3.js";import"./p-661d8950.js";import"./p-8ba7cdd1.js";import"./p-4311ebaf.js";import"./p-01810b75.js";
-/*!
- * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
- * See https://github.com/Esri/calcite-design-system/blob/main/LICENSE.md for details.
- * v2.7.0
- */
-var r={name:"nl",weekdays:"zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),weekdaysShort:"zo._ma._di._wo._do._vr._za.".split("_"),weekdaysMin:"zo_ma_di_wo_do_vr_za".split("_"),months:"januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),monthsShort:"jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),ordinal:function e(r){return"["+r+(r===1||r===8||r>=20?"ste":"de")+"]"},weekStart:1,yearStart:4,formats:{LT:"HH:mm",LTS:"HH:mm:ss",L:"DD-MM-YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY HH:mm",LLLL:"dddd D MMMM YYYY HH:mm"},relativeTime:{future:"over %s",past:"%s geleden",s:"een paar seconden",m:"een minuut",mm:"%d minuten",h:"een uur",hh:"%d uur",d:"een dag",dd:"%d dagen",M:"een maand",MM:"%d maanden",y:"een jaar",yy:"%d jaar"}};e.locale(r,null,true);export default r;
-//# sourceMappingURL=p-cf2047e2.js.map

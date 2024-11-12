@@ -1,2 +1,0 @@
-import{cd as o,c3 as n}from"./p-3013819f.js";const e={selection:e=>new o({color:new n([e.color.r/2,e.color.g/2,e.color.b/2,e.color.a])}),highlight:o=>o,popup:e=>new o({color:new n([e.color.g,e.color.b,e.color.r,e.color.a])})};function t(o){if(!o)return 0;let n=1;for(const t in e){if(t===o)break;n<<=1}return n}const r=Object.keys(e);export{e as c,r as l,t};
-//# sourceMappingURL=p-7b13247d.js.map

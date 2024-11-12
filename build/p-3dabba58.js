@@ -1,8 +1,0 @@
-import{d as p}from"./p-8b44477c.js";import"./p-3013819f.js";import"./p-3b51db5e.js";import"./p-9b68b44d.js";import"./p-49ae4733.js";import"./p-fe91e791.js";import"./p-2c44d431.js";import"./p-43877d33.js";import"./p-f148cf8f.js";import"./p-b007e81c.js";import"./p-483e769b.js";import"./p-77f2a655.js";import"./p-19172bea.js";import"./p-39f987a6.js";import"./p-14eaf8be.js";import"./p-e37240b5.js";import"./p-9131549e.js";import"./p-7dec6513.js";import"./p-6cc6542d.js";import"./p-e2b49f40.js";import"./p-df5915d3.js";import"./p-661d8950.js";import"./p-8ba7cdd1.js";import"./p-4311ebaf.js";import"./p-01810b75.js";
-/*!
- * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
- * See https://github.com/Esri/calcite-design-system/blob/main/LICENSE.md for details.
- * v2.7.0
- */
-var _={name:"hi",weekdays:"रविवार_सोमवार_मंगलवार_बुधवार_गुरूवार_शुक्रवार_शनिवार".split("_"),months:"जनवरी_फ़रवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितम्बर_अक्टूबर_नवम्बर_दिसम्बर".split("_"),weekdaysShort:"रवि_सोम_मंगल_बुध_गुरू_शुक्र_शनि".split("_"),monthsShort:"जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.".split("_"),weekdaysMin:"र_सो_मं_बु_गु_शु_श".split("_"),ordinal:function p(_){return _},formats:{LT:"A h:mm बजे",LTS:"A h:mm:ss बजे",L:"DD/MM/YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY, A h:mm बजे",LLLL:"dddd, D MMMM YYYY, A h:mm बजे"},relativeTime:{future:"%s में",past:"%s पहले",s:"कुछ ही क्षण",m:"एक मिनट",mm:"%d मिनट",h:"एक घंटा",hh:"%d घंटे",d:"एक दिन",dd:"%d दिन",M:"एक महीने",MM:"%d महीने",y:"एक वर्ष",yy:"%d वर्ष"}};p.locale(_,null,true);export default _;
-//# sourceMappingURL=p-3dabba58.js.map

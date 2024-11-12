@@ -1,8 +1,0 @@
-import{d as p}from"./p-8b44477c.js";import"./p-3013819f.js";import"./p-3b51db5e.js";import"./p-9b68b44d.js";import"./p-49ae4733.js";import"./p-fe91e791.js";import"./p-2c44d431.js";import"./p-43877d33.js";import"./p-f148cf8f.js";import"./p-b007e81c.js";import"./p-483e769b.js";import"./p-77f2a655.js";import"./p-19172bea.js";import"./p-39f987a6.js";import"./p-14eaf8be.js";import"./p-e37240b5.js";import"./p-9131549e.js";import"./p-7dec6513.js";import"./p-6cc6542d.js";import"./p-e2b49f40.js";import"./p-df5915d3.js";import"./p-661d8950.js";import"./p-8ba7cdd1.js";import"./p-4311ebaf.js";import"./p-01810b75.js";
-/*!
- * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
- * See https://github.com/Esri/calcite-design-system/blob/main/LICENSE.md for details.
- * v2.7.0
- */
-var r={name:"bg",weekdays:"неделя_понеделник_вторник_сряда_четвъртък_петък_събота".split("_"),weekdaysShort:"нед_пон_вто_сря_чет_пет_съб".split("_"),weekdaysMin:"нд_пн_вт_ср_чт_пт_сб".split("_"),months:"януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември".split("_"),monthsShort:"янр_фев_мар_апр_май_юни_юли_авг_сеп_окт_ное_дек".split("_"),weekStart:1,ordinal:function p(r){var _=r%100;if(_>10&&_<20){return r+"-ти"}var t=r%10;if(t===1){return r+"-ви"}else if(t===2){return r+"-ри"}else if(t===7||t===8){return r+"-ми"}return r+"-ти"},formats:{LT:"H:mm",LTS:"H:mm:ss",L:"D.MM.YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY H:mm",LLLL:"dddd, D MMMM YYYY H:mm"},relativeTime:{future:"след %s",past:"преди %s",s:"няколко секунди",m:"минута",mm:"%d минути",h:"час",hh:"%d часа",d:"ден",dd:"%d дена",M:"месец",MM:"%d месеца",y:"година",yy:"%d години"}};p.locale(r,null,true);export default r;
-//# sourceMappingURL=p-483603f6.js.map

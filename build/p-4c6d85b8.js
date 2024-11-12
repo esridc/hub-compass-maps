@@ -1,0 +1,2 @@
+import{dA as p,nC as o}from"./p-028496e2.js";import{a as t}from"./p-fa833333.js";import"./p-3b51db5e.js";import"./p-c439e241.js";import"./p-0120bda4.js";import"./p-82d7ddb5.js";import"./p-94b15954.js";import"./p-1f0b604e.js";import"./p-347800d3.js";async function r(r,s,i){const m=p(r);return(await t(m,o.from(s),{...i})).data.count}export{r as executeForTopCount};
+//# sourceMappingURL=p-4c6d85b8.js.map

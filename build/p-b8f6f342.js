@@ -1,0 +1,2 @@
+import{O as p}from"./p-bffebe9a.js";import"./p-3c20266a.js";import"./p-028496e2.js";import"./p-3b51db5e.js";import"./p-4f73c6ea.js";function e(e){return(0,p[e.operation])(...e.parameters)}export{e as executeGEOperation};
+//# sourceMappingURL=p-b8f6f342.js.map

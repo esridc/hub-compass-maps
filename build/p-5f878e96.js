@@ -1,2 +1,0 @@
-import{Y as a,d4 as i,a as n}from"./p-3013819f.js";function o(o){if(a.apiKey&&i(o.portal.url))throw new n("save-api-key-utils:api-key-not-supported",`Saving is not supported on ${o.portal.url} when using an api key`)}export{o as i};
-//# sourceMappingURL=p-5f878e96.js.map

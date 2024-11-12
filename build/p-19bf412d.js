@@ -1,0 +1,2 @@
+import{an as s,ap as r}from"./p-028496e2.js";import{E as e,b as t,R as i}from"./p-d1d0c06b.js";import{i as p}from"./p-262e0e67.js";let h=class extends p{get hasHighlight(){return this.children.some((s=>s.hasData))}renderChildren(s){this.attributeView.update(),s.drawPhase===e.HIGHLIGHT&&this.children.some((s=>s.hasData))&&(super.renderChildren(s),s.context.setColorMask(!0,!0,!0,!0),t(s,!0,(s=>{this._renderChildren(s,i.All)})))}};h=s([r("esri.views.2d.layers.support.HighlightGraphicContainer")],h);const a=h;export{a as h};
+//# sourceMappingURL=p-19bf412d.js.map

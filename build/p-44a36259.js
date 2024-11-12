@@ -1,2 +1,0 @@
-import{al as t}from"./p-3013819f.js";function n(n,r,e=0){const c=t(n,0,f);for(let t=0;t<4;t++)r[e+t]=Math.floor(256*a(c*o[t]))}function r(t,n=0){let r=0;for(let o=0;o<4;o++)r+=t[n+o]*e[o];return r}const o=[1,256,65536,16777216],e=[1/256,1/65536,1/16777216,1/4294967296],f=r(new Uint8ClampedArray([255,255,255,255]));function a(t){return t-Math.floor(t)}export{n as o,r};
-//# sourceMappingURL=p-44a36259.js.map
