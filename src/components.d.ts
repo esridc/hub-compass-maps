@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HubCompassMap {
-        "addDatasetToMap": (datasetId: any) => Promise<void>;
+        "addDatasetToMap": (datasetId: any) => Promise<boolean>;
         /**
           * Basemap string Options: https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#basemap
          */
