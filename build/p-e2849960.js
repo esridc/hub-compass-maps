@@ -1,0 +1,2 @@
+import{n as t}from"./p-1c285990.js";import{e}from"./p-da522976.js";import{s as o}from"./p-aff89b86.js";const r={getObjectId:t=>t.objectId,getAttributes:t=>t.attributes,getAttribute:(t,e)=>t.attributes[e],cloneWithGeometry:(t,o)=>new e(o,t.attributes,null,t.objectId),getGeometry:t=>t.geometry,getCentroid:(e,r)=>(null==e.centroid&&(e.centroid=t(new o,e.geometry,r.hasZ,r.hasM)),e.centroid)};export{r as o};
+//# sourceMappingURL=p-e2849960.js.map

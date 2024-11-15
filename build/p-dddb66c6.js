@@ -1,0 +1,2 @@
+class n{}const t=n;function r(n,...t){let r="";for(let u=0;u<t.length;u++)r+=n[u]+t[u];return r+=n[n.length-1],r}function u(n,t,r=""){return n?t:r}!function(n){function t(n){return Math.round(n).toString()}function r(n){return n.toPrecision(8)}n.int=t,n.float=r}(r||(r={}));export{r as o,u as r,t};
+//# sourceMappingURL=p-dddb66c6.js.map

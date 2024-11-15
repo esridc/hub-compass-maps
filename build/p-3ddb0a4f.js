@@ -1,8 +1,0 @@
-import{d as i}from"./p-81562e63.js";import"./p-028496e2.js";import"./p-3b51db5e.js";import"./p-8793cc2f.js";import"./p-49ae4733.js";import"./p-fe91e791.js";import"./p-9cc1ce24.js";import"./p-efc7ad18.js";import"./p-f148cf8f.js";import"./p-b007e81c.js";import"./p-483e769b.js";import"./p-0d934a08.js";import"./p-19172bea.js";import"./p-ef727936.js";import"./p-5f256b4d.js";import"./p-f01cda96.js";import"./p-bc3602fa.js";import"./p-6a8fad16.js";import"./p-738beb1e.js";import"./p-5625675b.js";import"./p-01c3f132.js";import"./p-661d8950.js";import"./p-8ba7cdd1.js";import"./p-6aa1859c.js";import"./p-920fef3c.js";
-/*!
- * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
- * See https://github.com/Esri/calcite-design-system/blob/main/LICENSE.md for details.
- * v2.7.0
- */
-var e={name:"ro",weekdays:"Duminică_Luni_Marți_Miercuri_Joi_Vineri_Sâmbătă".split("_"),weekdaysShort:"Dum_Lun_Mar_Mie_Joi_Vin_Sâm".split("_"),weekdaysMin:"Du_Lu_Ma_Mi_Jo_Vi_Sâ".split("_"),months:"Ianuarie_Februarie_Martie_Aprilie_Mai_Iunie_Iulie_August_Septembrie_Octombrie_Noiembrie_Decembrie".split("_"),monthsShort:"Ian._Febr._Mart._Apr._Mai_Iun._Iul._Aug._Sept._Oct._Nov._Dec.".split("_"),weekStart:1,formats:{LT:"H:mm",LTS:"H:mm:ss",L:"DD.MM.YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY H:mm",LLLL:"dddd, D MMMM YYYY H:mm"},relativeTime:{future:"peste %s",past:"acum %s",s:"câteva secunde",m:"un minut",mm:"%d minute",h:"o oră",hh:"%d ore",d:"o zi",dd:"%d zile",M:"o lună",MM:"%d luni",y:"un an",yy:"%d ani"},ordinal:function i(e){return e}};i.locale(e,null,true);export default e;
-//# sourceMappingURL=p-3ddb0a4f.js.map

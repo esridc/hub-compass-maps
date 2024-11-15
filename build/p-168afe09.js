@@ -1,2 +1,0 @@
-import{an as s,ao as t,ap as e,dG as r,fw as o}from"./p-028496e2.js";import"./p-3b51db5e.js";var a;let i=a=class extends r{static from(s){return o(a,s)}constructor(s){super(s),this.sessionId=void 0,this.moment=null}};s([t({type:String,json:{write:!0}})],i.prototype,"sessionId",void 0),s([t({type:Date,json:{type:Number,write:{writer:(s,t)=>{t.moment=s?s.getTime():null}}}})],i.prototype,"moment",void 0),i=a=s([e("esri.rest.versionManagement.gdbVersion.support.PostParameters")],i);const n=i;export default n;
-//# sourceMappingURL=p-168afe09.js.map

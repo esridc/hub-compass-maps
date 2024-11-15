@@ -1,4 +1,4 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>hub-compass-maps</title> <script type="module" src="./build/hub-compass-maps.esm.js"></script> <script nomodule="" src="./build/hub-compass-maps.js"></script> <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.4.3/calcite.css"> <script type="module" src="https://js.arcgis.com/calcite-components/1.4.3/calcite.esm.js"></script> <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css"> <!-- <script src="https://js.arcgis.com/4.27/"></script> --> </head> <body> <!-- Delayed render so we can get the API key from URL parameters --> <!-- <div id="viewDiv"></div> --> <div id="placeholder"></div> <div id="addDatasets"> <calcite-button onclick="addFeatures()"> Add Features </calcite-button> <calcite-button onclick="addDatasets('7c6443b23d364689be9b34324e6c677d')"> Add Trash </calcite-button> <calcite-button onclick="addDatasets('f6c3c04113944f23a7993f2e603abaf2')"> Add Trees </calcite-button> <calcite-button onclick="addDatasets('4ac321b2d409438ebd76a6569ad94034')"> Add Schools </calcite-button> <calcite-button onclick="addDatasets('3314d4acaaf84410aba319be81d69041')"> Add Table </calcite-button> <calcite-button onclick="moveMap([-75,39], 10)"> Move Map </calcite-button> <calcite-button onclick="saveMap()"> Save Map </calcite-button> </div> <style>html, body, #viewDiv, #placeholder {
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>hub-compass-maps</title> <script type="module" src="./build/hub-compass-maps.esm.js"></script> <script nomodule="" src="./build/hub-compass-maps.js"></script> <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.4.3/calcite.css"> <script type="module" src="https://js.arcgis.com/calcite-components/1.4.3/calcite.esm.js"></script> <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css"> <!-- <script src="https://js.arcgis.com/4.27/"></script> --> </head> <body> <!-- Delayed render so we can get the API key from URL parameters --> <!-- <div id="viewDiv"></div> --> <div id="placeholder"></div> <div id="addDatasets"> <calcite-button onclick="addFeatures()"> Add Features </calcite-button> <calcite-button onclick="addDatasets('7c6443b23d364689be9b34324e6c677d')"> Add Trash </calcite-button> <calcite-button onclick="addDatasets('f6c3c04113944f23a7993f2e603abaf2')"> Add Trees </calcite-button> <calcite-button onclick="addDatasets('4ac321b2d409438ebd76a6569ad94034')"> Add Schools </calcite-button> <calcite-button onclick="addDatasets('3314d4acaaf84410aba319be81d69041')"> Add Table </calcite-button> <calcite-button onclick="moveMap([-75,39], 10)"> Move Map </calcite-button> <calcite-button onclick="saveMap()"> Save Map </calcite-button> </div> <style>html, body, #viewDiv, #placeholder {
       font-family: sans-serif;
       padding: 0;
       margin: 0;
@@ -10,6 +10,7 @@
       height: 100%;
       width: 100%;
       border: 1px solid purple;
+      box-sizing: border-box;
     }
     #addDatasets {
       position: absolute;
@@ -55,7 +56,7 @@
     placeholderEl.appendChild(componentEl);
 
     componentEl.addEventListener("mapViewExtentChanged", (event) => {
-      console.log("mapViewExtentChanged", event.detail);
+      // console.log("mapViewExtentChanged", event.detail);
     });
     function addFeatures() {
       const features = [];

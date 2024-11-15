@@ -1,0 +1,2 @@
+import{i as r}from"./p-7523d580.js";function i(i){i?.writtenProperties&&i.writtenProperties.forEach((({target:i,propName:o,newOrigin:p})=>{r(i)&&p&&i.originOf(o)!==p&&i.updateOrigin(o,p)}))}export{i};
+//# sourceMappingURL=p-f3c2956c.js.map

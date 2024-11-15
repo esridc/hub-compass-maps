@@ -1,0 +1,2 @@
+import{T as n,m3 as s,m4 as e,m5 as t,m6 as a,m7 as o,m8 as f}from"./p-aad64c9f.js";const c=new n(s),i=new n(e),l=new n(t),m=new n(a);function r(n){const s=u.get(n);if(s)return s;let e=c;if(n)if(n===i)e=i;else if(n===l)e=l;else{const s=n.wkid,t=n.latestWkid;if(null!=s||null!=t)o(s)||o(t)?e=i:(f(s)||f(t))&&(e=l);else{const s=n.wkt2??n.wkt;if(s){const n=s.toUpperCase();n===w?e=i:n===p&&(e=l)}}}return u.set(n,e),e}const u=new Map,w=i.wkt.toUpperCase(),p=l.wkt.toUpperCase();export{r as a,m as w};
+//# sourceMappingURL=p-1826fadd.js.map

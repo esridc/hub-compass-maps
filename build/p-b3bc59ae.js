@@ -1,2 +1,0 @@
-import{E as s,R as i,b as t}from"./p-d1d0c06b.js";import{i as e}from"./p-262e0e67.js";class h extends e{renderChildren(t){for(const s of this.children)s.setTransform(t.state);if(super.renderChildren(t),this.attributeView.update(),this.children.some((s=>s.hasData))){switch(t.drawPhase){case s.MAP:this._renderChildren(t,i.All);break;case s.HIGHLIGHT:this.hasHighlight&&this._renderHighlight(t)}this._boundsRenderer&&this._boundsRenderer.doRender(t)}}_renderHighlight(s){t(s,!1,(s=>{this._renderChildren(s,i.Highlight)}))}}export{h as t};
-//# sourceMappingURL=p-b3bc59ae.js.map

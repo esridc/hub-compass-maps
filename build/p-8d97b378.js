@@ -1,0 +1,8 @@
+import{d as s}from"./p-703d6e1e.js";import"./p-aad64c9f.js";import"./p-2af77f97.js";import"./p-f8f1a631.js";import"./p-cdbdef01.js";import"./p-05749d2a.js";import"./p-01f923a1.js";import"./p-f981b36b.js";import"./p-a431f44e.js";import"./p-8711f003.js";import"./p-efdd0667.js";import"./p-7a58b9e0.js";import"./p-74a05ecd.js";import"./p-021cd4d2.js";import"./p-d964b132.js";import"./p-523ead58.js";import"./p-b33f4035.js";import"./p-85d4ddf7.js";import"./p-24c81c10.js";import"./p-bba1f791.js";import"./p-d1ec478e.js";import"./p-c04ce53a.js";import"./p-cc309983.js";import"./p-eb4cfde8.js";import"./p-7380fb1a.js";import"./p-05a0cbe8.js";import"./p-bf25cd6c.js";
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-design-system/blob/dev/LICENSE.md for details.
+ * v2.13.2
+ */
+var m={name:"lv",weekdays:"svētdiena_pirmdiena_otrdiena_trešdiena_ceturtdiena_piektdiena_sestdiena".split("_"),months:"janvāris_februāris_marts_aprīlis_maijs_jūnijs_jūlijs_augusts_septembris_oktobris_novembris_decembris".split("_"),weekStart:1,weekdaysShort:"Sv_P_O_T_C_Pk_S".split("_"),monthsShort:"jan_feb_mar_apr_mai_jūn_jūl_aug_sep_okt_nov_dec".split("_"),weekdaysMin:"Sv_P_O_T_C_Pk_S".split("_"),ordinal:function s(m){return m},formats:{LT:"HH:mm",LTS:"HH:mm:ss",L:"DD.MM.YYYY.",LL:"YYYY. [gada] D. MMMM",LLL:"YYYY. [gada] D. MMMM, HH:mm",LLLL:"YYYY. [gada] D. MMMM, dddd, HH:mm"},relativeTime:{future:"pēc %s",past:"pirms %s",s:"dažām sekundēm",m:"minūtes",mm:"%d minūtēm",h:"stundas",hh:"%d stundām",d:"dienas",dd:"%d dienām",M:"mēneša",MM:"%d mēnešiem",y:"gada",yy:"%d gadiem"}};s.locale(m,null,true);export default m;
+//# sourceMappingURL=p-8d97b378.js.map

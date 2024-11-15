@@ -1,0 +1,2 @@
+import{r as t,p as e,q as s,_ as r,gZ as o}from"./p-aad64c9f.js";import"./p-2af77f97.js";var a;let i=a=class extends r{static from(t){return o(a,t)}constructor(t){super(t),this.sessionId=void 0,this.moment=null}};t([e({type:String,json:{write:!0}})],i.prototype,"sessionId",void 0),t([e({type:Date,json:{type:Number,write:{writer:(t,e)=>{e.moment=t?t.getTime():null}}}})],i.prototype,"moment",void 0),i=a=t([s("esri.rest.versionManagement.gdbVersion.support.DeleteForwardEditsParameters")],i);const n=i;export default n;
+//# sourceMappingURL=p-910555d0.js.map

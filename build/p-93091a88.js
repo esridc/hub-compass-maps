@@ -1,0 +1,2 @@
+function e(){return[0,0,0,1]}function n(e){return[e[0],e[1],e[2],e[3]]}function t(e,n,t,o){return[e,n,t,o]}const o=e();Object.freeze(Object.defineProperty({__proto__:null,IDENTITY:o,clone:n,create:e,fromValues:t},Symbol.toStringTag,{value:"Module"}));export{e,o as r,n as t};
+//# sourceMappingURL=p-93091a88.js.map

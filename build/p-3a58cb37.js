@@ -1,0 +1,2 @@
+import{T as n}from"./p-aad64c9f.js";import{c as t}from"./p-66c1870a.js";function a(n,t,a,o){return{x:n,y:t,z:a,hasZ:null!=a,hasM:!1,spatialReference:o,type:"point"}}function o(n,t,a,o,r){n.x=t,n.y=a,n.z=o,n.hasZ=null!=o,n.spatialReference=r}function r(n,a,o,r,u){return!(null==a||null==r||n.length<2)&&(l.x=n[0],l.y=n[1],l.z=n[2],l.spatialReference=a,t(l,o,r,u))}const l=a(0,0,0,n.WGS84);export{o as a,a as e,r as n};
+//# sourceMappingURL=p-3a58cb37.js.map

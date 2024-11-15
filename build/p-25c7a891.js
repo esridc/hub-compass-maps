@@ -1,2 +1,0 @@
-import{dA as p,nC as t,dC as r}from"./p-028496e2.js";import{p as s}from"./p-fa833333.js";import"./p-3b51db5e.js";import"./p-c439e241.js";import"./p-0120bda4.js";import"./p-82d7ddb5.js";import"./p-94b15954.js";import"./p-1f0b604e.js";import"./p-347800d3.js";async function o(o,a,e,i){const m=p(o),d={...i},{data:j}=await s(m,t.from(a),e,d);return r.fromJSON(j)}export{o as executeTopFeaturesQuery};
-//# sourceMappingURL=p-25c7a891.js.map
