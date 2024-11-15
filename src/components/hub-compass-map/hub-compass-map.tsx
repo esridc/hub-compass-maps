@@ -17,6 +17,7 @@ import Expand from "@arcgis/core/widgets/Expand";
 import BasemapGallery from "@arcgis/core/widgets/BasemapGallery";
 import * as projection from "@arcgis/core/geometry/projection.js";
 import SpatialReference from "@arcgis/core/geometry/SpatialReference.js";
+import * as reactiveUtils from "@arcgis/core/core/reactiveUtils.js";
 
 // import PortalItem from "@arcgis/core/portal/PortalItem";
 // import reactiveUtils from "@arcgis/core/reactiveUtils";
@@ -154,7 +155,7 @@ export class HubCompassMap {
   @Watch('datasetIds')
   async updateDatasets(newDatasetIds, oldDatasetIds) {
     console.debug("hub-compass-map: updateDatasets", {newDatasetIds, oldDatasetIds})
-    newDatasetIds.forEach(async (datasetId) => {
+    newDatasetIds.forEach((datasetId) => {
 
       // Don't add duplicate layers
       if(oldDatasetIds.includes(datasetId)) {
@@ -225,18 +226,24 @@ export class HubCompassMap {
   @Method()
   public async addDatasetToMap(datasetId) {
 
-    const datasetLayer = await new FeatureLayer({
+    const datasetLayer = new FeatureLayer({
       portalItem: {
         id: datasetId
       }
     });
-
-    datasetLayer.popupEnabled = true;
-
     this.webMap.add(datasetLayer);
+
+    // wait for the layer to load:
+    await reactiveUtils.once(() => datasetLayer.loadStatus === "loaded")
+
+    // after the layer loads, add it to this.datasetEls:
+    datasetLayer.popupEnabled = true;
     this.datasetEls[datasetId] ||= {}
     this.datasetEls[datasetId].layer = datasetLayer;
 
+    this.addTable(datasetId, datasetLayer);
+
+    return true;
   }
 
   /**
@@ -246,23 +253,7 @@ export class HubCompassMap {
     if(!!this.session) {
       IdentityManager.registerToken(this.session);
     }
-  } 
-
-  /**
-   * Render tables after the elements are there
-   */
-  async componentDidRender() {
-    console.debug("hub-compass-map: componentDidRender", this.datasetEls)
-    if(this.showTable) {
-      Object.keys(this.datasetEls).forEach((datasetId) => {
-        if(!this.datasetEls[datasetId].table) {
-          this.addTable(datasetId, this.datasetEls[datasetId].layer)
-        }
-      })
-    }
-
   }
-
 
   mapEl: HTMLDivElement;
   tableEl: HTMLDivElement;
@@ -385,10 +376,9 @@ export class HubCompassMap {
     //   }
     // );
     
+    // If there are incoming datasets, add it to the map
     if(!!this.datasetIds && this.datasetIds.length > 0) {
-      this.datasetIds.forEach((datasetId) => {
-        this.addDatasetToMap(datasetId);
-      })
+      this.datasetIds.forEach(ds => this.addDatasetToMap(ds));
     }
   }
 
@@ -505,7 +495,7 @@ export class HubCompassMap {
   tableTabsEl: HTMLDivElement; 
   tableTabsNavEl: HTMLDivElement;
   renderTables(datasetIds: string[]) {
-    return(
+    return datasetIds.length > 0 && (
         <calcite-tabs  ref={(el) => {this.tableTabsEl = el}}>
           <calcite-tab-nav slot="title-group" ref={(el) => {this.tableTabsNavEl = el}}>
           {datasetIds.map((dataset) => {
