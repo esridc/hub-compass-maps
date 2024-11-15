@@ -505,7 +505,7 @@ export class HubCompassMap {
   tableTabsEl: HTMLDivElement; 
   tableTabsNavEl: HTMLDivElement;
   renderTables(datasetIds: string[]) {
-    return(
+    return datasetIds.length > 0 && (
         <calcite-tabs  ref={(el) => {this.tableTabsEl = el}}>
           <calcite-tab-nav slot="title-group" ref={(el) => {this.tableTabsNavEl = el}}>
           {datasetIds.map((dataset) => {
