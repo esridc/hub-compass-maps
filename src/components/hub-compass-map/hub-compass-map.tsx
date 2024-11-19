@@ -169,19 +169,37 @@ export class HubCompassMap {
 
   @Watch('center')
   async updateCenter(newCenter) {
-    this.mapView.goTo({
-      center: newCenter,
-      zoom: this.zoom
-    });
-    const graphic = this.createGraphic(this.mapView.center);
-    this.mapView.graphics.addMany([graphic], 0);
+    if(this.mapView) {
+
+      // mapView may exist but not be ready - like in the case of updating the center immediately. 
+      // so we should wait till it's ready.
+      await reactiveUtils.once(() => this.mapView.ready === true)
+
+      this.mapView.goTo({
+        center: newCenter,
+        zoom: this.zoom
+      });
+      const graphic = this.createGraphic(this.mapView.center);
+      this.mapView.graphics.addMany([graphic], 0);
+    } else {
+      console.warn("Trying to goto but no map created yet.")
+    }
   }
   @Watch('zoom')
   async updateZoom(newZoom) {
-    this.mapView.goTo({
-      center: this.center,
-      zoom: newZoom
-    });
+    if(this.mapView) {
+
+      // mapView may exist but not be ready - like in the case of updating the center immediately. 
+      // so we should wait till it's ready.
+      await reactiveUtils.once(() => this.mapView.ready === true)
+
+      this.mapView.goTo({
+        center: this.center,
+        zoom: newZoom
+      });
+    } else {
+      console.warn('Trying to zoom to but no map created yet.');
+    }
   }
 
   /**
