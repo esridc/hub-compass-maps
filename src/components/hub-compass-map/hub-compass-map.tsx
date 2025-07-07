@@ -2,6 +2,7 @@ import { Component, Event, EventEmitter, Host, Method, Prop, State, Watch, h } f
 import MapView from "@arcgis/core/views/MapView";
 import WebMap from "@arcgis/core/WebMap";
 // import esriConfig from "@arcgis/core/config.js";
+import Layer from "@arcgis/core/layers/Layer.js";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer.js";
 import Graphic from "@arcgis/core/Graphic.js";
 import ServiceAreaParameters from "@arcgis/core/rest/support/ServiceAreaParameters.js";
@@ -133,7 +134,7 @@ export class HubCompassMap {
    * Basemap string
    * Options: https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#basemap
    */
-  @Prop() basemap: string = "arcgis-topographic";
+  @Prop() basemap: string = "gray-vector";
 
   /**
    * If map has already been saved, update it.
@@ -225,8 +226,9 @@ export class HubCompassMap {
 
   @Method()
   public async addDatasetToMap(datasetId) {
-
-    const datasetLayer = new FeatureLayer({
+    
+    const datasetLayer = await Layer.fromPortalItem({
+      //@ts-ignore // this autocasts to a PortalItem()
       portalItem: {
         id: datasetId
       }
@@ -235,13 +237,18 @@ export class HubCompassMap {
 
     // wait for the layer to load:
     await reactiveUtils.once(() => datasetLayer.loadStatus === "loaded")
-
+    console.debug("hub-compass-map: addDatasetToMap", {datasetId, datasetLayer, datasetEls: this.datasetEls})
     // after the layer loads, add it to this.datasetEls:
-    datasetLayer.popupEnabled = true;
+    if (datasetLayer.type === "feature") {
+      // FeatureLayer: add table as usual
+      (datasetLayer as FeatureLayer).popupEnabled = true;
+      this.addTable(datasetId, datasetLayer);
+    } else if (datasetLayer.type === "imagery") {
+      // ImageLayer: no table, but can add popup or other logic if needed
+      // Optionally enable popups or handle imagery-specific logic here
+    }
     this.datasetEls[datasetId] ||= {}
     this.datasetEls[datasetId].layer = datasetLayer;
-
-    this.addTable(datasetId, datasetLayer);
 
     return true;
   }

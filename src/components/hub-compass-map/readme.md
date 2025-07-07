@@ -9,8 +9,10 @@
 
 | Property            | Attribute            | Description                                                                                                                               | Type               | Default              |
 | ------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- |
+| `basemap`           | `basemap`            | Basemap string Options: https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#basemap                            | `string`           | `"gray-vector"`      |
 | `center`            | --                   | Optional [longitude, latitude] map center                                                                                                 | `[number, number]` | `[0,0]`              |
 | `datasetIds`        | --                   | Optional array of datasets to add to map                                                                                                  | `string[]`         | `[]`                 |
+| `features`          | --                   | Optional features to display on the map See https://developers.arcgis.com/javascript/latest/sample-code/layers-featurelayer-collection/   | `any[]`            | `null`               |
 | `mapId`             | `map-id`             | Optional Map id to display                                                                                                                | `string`           | `null`               |
 | `serviceAreaBreaks` | --                   | Service area distances in kilomenters Default to 1,5,10 minute based on 4.54km/hr speed                                                   | `number[]`         | `[0.07, 0.37, 0.75]` |
 | `serviceAreaPoint`  | `service-area-point` | Optional location to calculate service center. Changing this will update the point                                                        | `any`              | `null`               |
@@ -27,20 +29,21 @@
 
 ## Events
 
-| Event      | Description | Type               |
-| ---------- | ----------- | ------------------ |
-| `mapSaved` |             | `CustomEvent<any>` |
+| Event                  | Description                                                                 | Type               |
+| ---------------------- | --------------------------------------------------------------------------- | ------------------ |
+| `mapSaved`             |                                                                             | `CustomEvent<any>` |
+| `mapViewExtentChanged` | Event emitted when the map view's extent changes due to panning or zooming. | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `addDatasetToMap(datasetId: any) => Promise<void>`
+### `addDatasetToMap(datasetId: any) => Promise<boolean>`
 
 
 
 #### Returns
 
-Type: `Promise<void>`
+Type: `Promise<boolean>`
 
 
 
