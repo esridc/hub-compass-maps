@@ -140,7 +140,8 @@ export class HubCompassMap {
    * If map has already been saved, update it.
    */
   @State() _item = null;
-  
+
+
   @Watch('serviceAreaPoint')
   updateServiceArea(newServicePoint) {
     this.createServiceAreas(newServicePoint);
@@ -226,13 +227,18 @@ export class HubCompassMap {
 
   @Method()
   public async addDatasetToMap(datasetId) {
-    
+    if (!!this.datasetEls[datasetId]) {
+      console.debug("hub-compass-map: addDatasetToMap - layer already exists", { datasetId });
+      return false;
+    }
+
     const datasetLayer = await Layer.fromPortalItem({
       //@ts-ignore // this autocasts to a PortalItem()
       portalItem: {
         id: datasetId
       }
     });
+        
     this.webMap.add(datasetLayer);
 
     // wait for the layer to load:
@@ -247,8 +253,15 @@ export class HubCompassMap {
       // ImageLayer: no table, but can add popup or other logic if needed
       // Optionally enable popups or handle imagery-specific logic here
     }
-    this.datasetEls[datasetId] ||= {}
-    this.datasetEls[datasetId].layer = datasetLayer;
+
+    // Use Object.assign to ensure reactivity for Stencil's @State
+    this.datasetEls = {
+      ...this.datasetEls,
+      [datasetId]: {
+      ...(this.datasetEls[datasetId] || {}),
+      layer: datasetLayer
+      }
+    };
 
     return true;
   }
@@ -399,6 +412,10 @@ export class HubCompassMap {
   private async addTable(datasetId, featureLayer) {
     console.debug("addTable: ", {datasetId, featureLayer, datasetEls: this.datasetEls})
 
+    if(!featureLayer || featureLayer.type !== "feature") {
+      console.warn("hub-compass-map: addTable called with non-feature layer", {datasetId, featureLayer});
+      return;
+    }
     const table = new FeatureTable({
       view: this.mapView,
       layer: featureLayer,
@@ -505,9 +522,10 @@ export class HubCompassMap {
     return datasetIds.length > 0 && (
         <calcite-tabs  ref={(el) => {this.tableTabsEl = el}}>
           <calcite-tab-nav slot="title-group" ref={(el) => {this.tableTabsNavEl = el}}>
-          {datasetIds.map((dataset) => {
-            return this.renderTableNav(dataset)
-          })}
+            {/* Ensure only unique dataset ids */}
+            {[...new Set(datasetIds)].map((datasetId, index) => {
+              return this.renderTableNav(datasetId, index)
+            })}
           </calcite-tab-nav>
           {datasetIds.map((dataset) => {
             return this.renderTableView(dataset)
@@ -516,11 +534,14 @@ export class HubCompassMap {
     )
   }
 
-  renderTableNav(datasetId:string) {
+  renderTableNav(datasetId:string, _index:number) {
     this.datasetEls[datasetId] ||= {};
-    console.debug("renderTableNav: ", {datasetId, datasetEls: this.datasetEls})
-
-    const output = <calcite-tab-title selected ref={(el) => {this.datasetEls[datasetId].nav = el}}>Table</calcite-tab-title>
+    console.debug("renderTableNav: ", {datasetId, dataset_type: this.datasetEls[datasetId]?.layer?.type, datasetEls: this.datasetEls})
+    if(this.datasetEls[datasetId]?.layer?.type !== "feature") {
+      // If not a feature layer, don't render the tab
+      return null;
+    }
+    const output = <calcite-tab-title selected ref={(el) => {this.datasetEls[datasetId].nav = el}}>{this.datasetEls[datasetId]?.layer?.title}</calcite-tab-title>
     return output
   }
   renderTableView(datasetId:string) {
