@@ -1,0 +1,2 @@
+import{ad as t,N as p}from"./p-c9c64150.js";import{d as o}from"./p-57111cca.js";import s from"./p-dfe1f8ff.js";import"./p-2af77f97.js";import"./p-43e45068.js";import"./p-89fde48b.js";import"./p-62095ee1.js";import"./p-aff89b86.js";import"./p-da522976.js";import"./p-d492d39b.js";async function r(r,i,a){const e=t(r),f=await o(e,s.from(i),{...a}),m=f.data.extent;return!m||isNaN(m.xmin)||isNaN(m.ymin)||isNaN(m.xmax)||isNaN(m.ymax)?{count:f.data.count,extent:null}:{count:f.data.count,extent:p.fromJSON(m)}}export{r as executeForTopExtents};
+//# sourceMappingURL=p-dc1517a3.js.map

@@ -1,0 +1,8 @@
+import{d as p}from"./p-5b8939ea.js";import"./p-c9c64150.js";import"./p-2af77f97.js";import"./p-fdb3e4fb.js";import"./p-cdbdef01.js";import"./p-9da4e839.js";import"./p-01f923a1.js";import"./p-f981b36b.js";import"./p-a431f44e.js";import"./p-2d3854fe.js";import"./p-d20fa6e2.js";import"./p-6b6d3984.js";import"./p-af657819.js";import"./p-2f7e261c.js";import"./p-93e26851.js";import"./p-30eb4df3.js";import"./p-b33f4035.js";import"./p-f073cc78.js";import"./p-8d004ee7.js";import"./p-10a6fbd4.js";import"./p-d01eefdf.js";import"./p-7fd2c188.js";import"./p-f5b8be69.js";import"./p-eb4cfde8.js";import"./p-1e1a6a58.js";import"./p-f6dd45fc.js";import"./p-7cf36e92.js";
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-design-system/blob/dev/LICENSE.md for details.
+ * v2.13.2
+ */
+var m={name:"ko",weekdays:"일요일_월요일_화요일_수요일_목요일_금요일_토요일".split("_"),weekdaysShort:"일_월_화_수_목_금_토".split("_"),weekdaysMin:"일_월_화_수_목_금_토".split("_"),months:"1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월".split("_"),monthsShort:"1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월".split("_"),ordinal:function p(m){return m+"일"},formats:{LT:"A h:mm",LTS:"A h:mm:ss",L:"YYYY.MM.DD.",LL:"YYYY년 MMMM D일",LLL:"YYYY년 MMMM D일 A h:mm",LLLL:"YYYY년 MMMM D일 dddd A h:mm",l:"YYYY.MM.DD.",ll:"YYYY년 MMMM D일",lll:"YYYY년 MMMM D일 A h:mm",llll:"YYYY년 MMMM D일 dddd A h:mm"},meridiem:function p(m){return m<12?"오전":"오후"},relativeTime:{future:"%s 후",past:"%s 전",s:"몇 초",m:"1분",mm:"%d분",h:"한 시간",hh:"%d시간",d:"하루",dd:"%d일",M:"한 달",MM:"%d달",y:"일 년",yy:"%d년"}};p.locale(m,null,true);export default m;
+//# sourceMappingURL=p-2f9b4a46.js.map

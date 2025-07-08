@@ -1,0 +1,2 @@
+import{cd as r}from"./p-c9c64150.js";import{t}from"./p-7ce0ff48.js";function n(r,n=0){const e=r.stride;return Array.from(r.fields.keys()).map((c=>{const f=r.fields.get(c),u=f.constructor.ElementCount,i=o(f.constructor.ElementType),s=f.offset,p=f.optional?.glNormalized??!1;return new t(c,u,i,s,e,p,n)}))}function o(r){const t=e[r];if(t)return t;throw new Error("BufferType not supported in WebGL")}const e={u8:r.UNSIGNED_BYTE,u16:r.UNSIGNED_SHORT,u32:r.UNSIGNED_INT,i8:r.BYTE,i16:r.SHORT,i32:r.INT,f32:r.FLOAT};export{n as t};
+//# sourceMappingURL=p-4d83e315.js.map

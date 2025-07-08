@@ -1,0 +1,8 @@
+import{d as p}from"./p-5b8939ea.js";import"./p-c9c64150.js";import"./p-2af77f97.js";import"./p-fdb3e4fb.js";import"./p-cdbdef01.js";import"./p-9da4e839.js";import"./p-01f923a1.js";import"./p-f981b36b.js";import"./p-a431f44e.js";import"./p-2d3854fe.js";import"./p-d20fa6e2.js";import"./p-6b6d3984.js";import"./p-af657819.js";import"./p-2f7e261c.js";import"./p-93e26851.js";import"./p-30eb4df3.js";import"./p-b33f4035.js";import"./p-f073cc78.js";import"./p-8d004ee7.js";import"./p-10a6fbd4.js";import"./p-d01eefdf.js";import"./p-7fd2c188.js";import"./p-f5b8be69.js";import"./p-eb4cfde8.js";import"./p-1e1a6a58.js";import"./p-f6dd45fc.js";import"./p-7cf36e92.js";
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-design-system/blob/dev/LICENSE.md for details.
+ * v2.13.2
+ */
+var _={name:"th",weekdays:"อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัสบดี_ศุกร์_เสาร์".split("_"),weekdaysShort:"อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัส_ศุกร์_เสาร์".split("_"),weekdaysMin:"อา._จ._อ._พ._พฤ._ศ._ส.".split("_"),months:"มกราคม_กุมภาพันธ์_มีนาคม_เมษายน_พฤษภาคม_มิถุนายน_กรกฎาคม_สิงหาคม_กันยายน_ตุลาคม_พฤศจิกายน_ธันวาคม".split("_"),monthsShort:"ม.ค._ก.พ._มี.ค._เม.ย._พ.ค._มิ.ย._ก.ค._ส.ค._ก.ย._ต.ค._พ.ย._ธ.ค.".split("_"),formats:{LT:"H:mm",LTS:"H:mm:ss",L:"DD/MM/YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY เวลา H:mm",LLLL:"วันddddที่ D MMMM YYYY เวลา H:mm"},relativeTime:{future:"อีก %s",past:"%sที่แล้ว",s:"ไม่กี่วินาที",m:"1 นาที",mm:"%d นาที",h:"1 ชั่วโมง",hh:"%d ชั่วโมง",d:"1 วัน",dd:"%d วัน",M:"1 เดือน",MM:"%d เดือน",y:"1 ปี",yy:"%d ปี"},ordinal:function p(_){return _+"."}};p.locale(_,null,true);export default _;
+//# sourceMappingURL=p-915f1a24.js.map

@@ -1,0 +1,2 @@
+import{ad as a,a0 as t}from"./p-c9c64150.js";import{S as s,p as n}from"./p-43e45068.js";async function o(n,o,r){const c=a(n),{data:i}=await s(c,t.from(o),r);return i.count}async function r(s,o,r){const c=a(s),{data:i}=await n(c,t.from(o),r);return i.objectIds}export{r as a,o as s};
+//# sourceMappingURL=p-db179874.js.map

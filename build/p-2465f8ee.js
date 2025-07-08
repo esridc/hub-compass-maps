@@ -1,0 +1,8 @@
+import{d as e}from"./p-5b8939ea.js";import"./p-c9c64150.js";import"./p-2af77f97.js";import"./p-fdb3e4fb.js";import"./p-cdbdef01.js";import"./p-9da4e839.js";import"./p-01f923a1.js";import"./p-f981b36b.js";import"./p-a431f44e.js";import"./p-2d3854fe.js";import"./p-d20fa6e2.js";import"./p-6b6d3984.js";import"./p-af657819.js";import"./p-2f7e261c.js";import"./p-93e26851.js";import"./p-30eb4df3.js";import"./p-b33f4035.js";import"./p-f073cc78.js";import"./p-8d004ee7.js";import"./p-10a6fbd4.js";import"./p-d01eefdf.js";import"./p-7fd2c188.js";import"./p-f5b8be69.js";import"./p-eb4cfde8.js";import"./p-1e1a6a58.js";import"./p-f6dd45fc.js";import"./p-7cf36e92.js";
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-design-system/blob/dev/LICENSE.md for details.
+ * v2.13.2
+ */
+var p={name:"en-au",weekdays:"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),months:"January_February_March_April_May_June_July_August_September_October_November_December".split("_"),weekStart:1,weekdaysShort:"Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),monthsShort:"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),weekdaysMin:"Su_Mo_Tu_We_Th_Fr_Sa".split("_"),ordinal:function e(p){return p},formats:{LT:"h:mm A",LTS:"h:mm:ss A",L:"DD/MM/YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY h:mm A",LLLL:"dddd, D MMMM YYYY h:mm A"},relativeTime:{future:"in %s",past:"%s ago",s:"a few seconds",m:"a minute",mm:"%d minutes",h:"an hour",hh:"%d hours",d:"a day",dd:"%d days",M:"a month",MM:"%d months",y:"a year",yy:"%d years"}};e.locale(p,null,true);export default p;
+//# sourceMappingURL=p-2465f8ee.js.map

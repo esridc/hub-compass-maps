@@ -1,0 +1,2 @@
+import{s as t}from"./p-fd436770.js";import{at as p,a4 as r,lM as n,et as o,aY as s}from"./p-c9c64150.js";import{v as a}from"./p-7479e197.js";import"./p-090df909.js";function e(t){return t?{p0:p(t.p0),p1:p(t.p1),p2:p(t.p2)}:{p0:r(),p1:r(),p2:r()}}function f(t,p,r){const n=p[0]-t[0],o=p[1]-t[1],s=r[0]-t[0],a=r[1]-t[1];return.5*Math.abs(n*a-o*s)}function c(t,p,r){return n(i,p,t),n(m,r,t),.5*o(s(i,i,m))}new t(a);new t((()=>e()));const i=r(),m=r();export{c as S,f as v};
+//# sourceMappingURL=p-84913816.js.map

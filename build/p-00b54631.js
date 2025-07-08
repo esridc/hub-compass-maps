@@ -1,0 +1,2 @@
+import{J as t,lT as n,mh as o,a4 as r}from"./p-c9c64150.js";function s(r,s,a,e){if(t(r.spatialReference,a)){c[0]=r.x,c[1]=r.y;const t=r.z;return c[2]=t??e??0,n(c,r.spatialReference,0,s,a,0)}const f=o(r,a);return!!f&&(s[0]=f?.x,s[1]=f?.y,s[2]=f?.z??e??0,!0)}const c=r();export{s as c};
+//# sourceMappingURL=p-00b54631.js.map

@@ -1,0 +1,2 @@
+import{C as t,hh as s}from"./p-c9c64150.js";const i=128e3;let n=null,c=null;async function o(){return n||(n=r()),n}async function r(){const i=t("esri-csp-restrictions")?await import("./p-79d4d34c.js").then((t=>t.l)):await import("./p-18299e20.js").then((t=>t.l));c=await i.default({locateFile:t=>s(`esri/core/libs/libtess/${t}`)})}function e(t,s){const n=Math.max(t.length,i);return c.triangulate(t,s,n)}export{e as a,o as i};
+//# sourceMappingURL=p-039e76b2.js.map

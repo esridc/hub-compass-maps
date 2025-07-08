@@ -1,0 +1,2 @@
+import{d$ as t}from"./p-c9c64150.js";function n(n,r,e=0){const a=t(n,0,c);for(let t=0;t<4;t++)r[e+t]=Math.floor(256*f(a*o[t]))}function r(t,n=0){let r=0;for(let o=0;o<4;o++)r+=t[n+o]*e[o];return r}const o=[1,256,65536,16777216],e=[1/256,1/65536,1/16777216,1/4294967296],c=r(new Uint8ClampedArray([255,255,255,255]));function f(t){return t-Math.floor(t)}export{n as o,r};
+//# sourceMappingURL=p-c1571067.js.map

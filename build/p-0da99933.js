@@ -1,0 +1,2 @@
+import"./p-c9c64150.js";class t{constructor(t){this.message=t}toString(){return`AssertException: ${this.message}`}}function r(r,n="Assertion"){if(!r){const r=new Error(n).stack;throw new t(`${n} at ${r}`)}}function n(t,r,n,e){let o,s=(n[0]-t[0])/r[0],i=(e[0]-t[0])/r[0];s>i&&(o=s,s=i,i=o);let c=(n[1]-t[1])/r[1],u=(e[1]-t[1])/r[1];if(c>u&&(o=c,c=u,u=o),s>u||c>i)return!1;c>s&&(s=c),u<i&&(i=u);let f=(n[2]-t[2])/r[2],l=(e[2]-t[2])/r[2];return f>l&&(o=f,f=l,l=o),!(s>l||f>i)&&(l<i&&(i=l),!(i<0))}export{n as i,r as s};
+//# sourceMappingURL=p-0da99933.js.map
